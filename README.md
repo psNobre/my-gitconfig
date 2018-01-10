@@ -15,7 +15,6 @@ $ git compare //Comparing all branches
 $ git compare . //Comparing current branch
 
 $ git compare <branch-name> //Comparing specific branch
-
 ```
 
 ### History of commits
@@ -27,7 +26,6 @@ Use `git hist` to see the history of commits related to the current branch.
 $ git hist //Show history (all commits) of branch
 
 $ git hist <n> //Show history ("n" commits) of branch
-
 ```
 
 
@@ -40,7 +38,6 @@ Use `git last` to show the last commits you want.
 $ git last //The last commit
 
 $ git last <n> //The last("n") commits
-
 ```
 
 ### Starting your branch before code
@@ -52,7 +49,6 @@ The `git start` command is used to update your branch with no necessary to check
 $ git start //Start current branch
 
 $ git last <branch-name> //Start specific branch
-
 ```
 
 ### Unlock your repository
@@ -62,7 +58,6 @@ $ git last <branch-name> //Start specific branch
 
 ```
 $ git unlock //Unlock repository
-
 ```
 
 ### Unstage files
@@ -74,7 +69,6 @@ Use `git unstage` to remove files from stage area.
 $ git unstage //Unstage all files
 
 $ git unstage <file> //Unstage specific file
-
 ```
 
 
