@@ -3,17 +3,12 @@
 	email = pedro.savio.nobre@gmail.com
 
 [alias]
-    compare = "!f() { if [ $# -eq 0 ]; then git for-each-ref --format='%(color:yellow)%(refname:short)%(color:reset) %(color:cyan)%(push:track)%(color:reset)' refs/heads/; elif [ $1 == "." ]; then git for-each-ref --format='%(color:yellow)%(refname:short)%(color:reset) %(color:cyan)%(push:track)%(color:reset)' refs/heads/`git rev-parse --abbrev-ref HEAD`; else git for-each-ref --format='%(color:yellow)%(refname:short)%(color:reset) %(color:cyan)%(push:track)%(color:reset)' refs/heads/$1; fi }; f"
-
-    hist = "!f() { if [ $# -eq 0 ]; then git log --graph --abbrev-commit --pretty=format:'%C(yellow)%h%Creset -%C(bold yellow)%d%Creset %s %Cgreen(%cr) %C(red)<%an>%Creset'; else git log -$1 --graph --abbrev-commit --pretty=format:'%C(yellow)%h%Creset -%C(bold yellow)%d%Creset %s %Cgreen(%cr) %C(red)<%an>%Creset'; fi }; f"
-
-    last = "!f() { if [ $# -eq 0 ]; then git log -1 HEAD; else git log -$1 HEAD; fi }; f"
-
-    start = "!f() { git checkout $1 && git reset --hard HEAD~`git rev-list @{u}..HEAD | wc -l` && git pull; }; f"   
-    
-    unlock = "! rm -f ./.git/index.lock #"
-    
-    unstage = reset HEAD --
+	compare = "!f() { if [ $# -eq 0 ]; then git for-each-ref --format='%(color:yellow)%(refname:short)%(color:reset) %(color:cyan)%(push:track)%(color:reset)' refs/heads/; elif [ $1 == "." ]; then git for-each-ref --format='%(color:yellow)%(refname:short)%(color:reset) %(color:cyan)%(push:track)%(color:reset)' refs/heads/`git rev-parse --abbrev-ref HEAD`; else git for-each-ref --format='%(color:yellow)%(refname:short)%(color:reset) %(color:cyan)%(push:track)%(color:reset)' refs/heads/$1; fi }; f"
+	hist = "!f() { if [ $# -eq 0 ]; then git log --graph --abbrev-commit --pretty=format:'%C(yellow)%h%Creset -%C(bold yellow)%d%Creset %s %Cgreen(%cr) %C(red)<%an>%Creset'; else git log -$1 --graph --abbrev-commit --pretty=format:'%C(yellow)%h%Creset -%C(bold yellow)%d%Creset %s %Cgreen(%cr) %C(red)<%an>%Creset'; fi }; f"
+	last = "!f() { if [ $# -eq 0 ]; then git log -1 HEAD; else git log -$1 HEAD; fi }; f"
+	start = "!f() { git checkout $1 && git reset --hard HEAD~`git rev-list @{u}..HEAD | wc -l` && git pull; }; f"
+	unlock = "! rm -f ./.git/index.lock #"
+	unstage = reset HEAD --
 
 [help]
 	autocorrect = 30
