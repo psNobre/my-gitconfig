@@ -13,7 +13,7 @@
     
     unlock = "! rm -f ./.git/index.lock #"
     
-	unstage = reset HEAD --
+    unstage = reset HEAD --
 
 [help]
 	autocorrect = 30
